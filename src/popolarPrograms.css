@@ -1,0 +1,47 @@
+.AnimationText{
+    display: block;
+    background: linear-gradient(to right, #ED1C24, #FCEC21);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: wordsSlide 6s infinite;
+}
+
+@keyframes wordsSlide {
+    9%{
+        transform: translateY(-112%);
+    }
+    18%{
+        transform: translateY(-100%);
+    }
+    27%{
+        transform: translateY(-212%);
+    }
+    36%{
+        transform: translateY(-200%);
+    }
+    45%{
+        transform: translateY(-312%);
+    }
+    54%{
+        transform: translateY(-300%);
+    }
+    63%{
+        transform: translateY(-412%);
+    }
+    72%{
+        transform: translateY(-400%);
+    }
+    81%{
+        transform: translateY(-512%);
+    }
+    90%{
+        transform: translateY(-500%);
+    }
+    95%{
+        transform: translateY(-612%);
+    }
+    100%{
+        transform: translateY(-600%);
+    }
+    
+}
