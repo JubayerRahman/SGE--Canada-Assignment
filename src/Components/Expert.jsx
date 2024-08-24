@@ -4,7 +4,7 @@ import man from "../../public/man.png"
 
 function Expert() {
   return (
-    <div className="expertMain flex items-center justify-around p-[20px] h-[400px]">
+    <div className="expertMain flex items-center justify-around p-[20px] h-[400px] z-0 mt-[50px] ">
         <div>
             <h1 className="text-[56px] text-white font-[600]">Talk to Our Expert <br />  Canada Counselor</h1>
             <button className="text-[16px] bg-white p-[10px] font-[600]  rounded-3xl w-[200px]">Contact Now </button>

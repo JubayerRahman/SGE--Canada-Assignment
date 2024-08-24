@@ -22,27 +22,27 @@ function TopUniversities() {
         <div className="flex items-start ">
           <div >
                 <div className='flex flex-wrap  items-center justify-evenly mb-[20px] mt-[20px]'>
-                <div onClick={() => setUni1View(!uni1View)}  className="uni1 h-[120px] mt-[20px] mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer hover:bg-blue-300 ">
+                <div onClick={() => setUni1View(!uni1View)}  className="uni1 h-[120px] mt-[20px] mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni1} alt="" />
                 </div>
-                <div className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni2} alt="" />
                 </div>
-                <div className="uni3 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni3 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni3} alt="" />
                 </div>
-                <div className="uni4 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni4 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni4} alt="" />
                 </div>
-                <div className="uni5 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni5 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni5} alt="" />
                 </div>
-                <div className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni6} alt="" />
                 </div>
                 </div>
                 <div className='flex flex-wrap  items-center justify-evenly mb-[20px]'>
-                <div className="uni1 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">
+                <div className="uni1 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni7} alt="" />
                 </div>
                 <div className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer ">

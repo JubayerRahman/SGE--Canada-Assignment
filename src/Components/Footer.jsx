@@ -1,5 +1,6 @@
 import "./Footer.css"
 import logo from '../../public/footerLogo.png'
+import footerImage from "../../public/footerShape.png"
 import footerimage from "../../public/footerImage.png"
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -12,7 +13,9 @@ import { FaYoutubeSquare } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="footerMain relative z-20 mt-[-50px] p-[20px] rounded-t-[10%] min-h-[200px]">
+    <div className="footerMain relative z-20  min-h-[200px] mt-[-60px]">
+            <img src={footerImage} alt="" />
+        <div className="footerContent bg-[#081831] p-[20px] ">
         <h1 className="text-center mt-[20px] font-[600]">Our Students are Our Reference</h1>
         <img className="mx-auto w-[170px] pt-[25px]"  src={logo} alt="" />
 
@@ -121,6 +124,7 @@ function Footer() {
                 <h1 className="text-[14px] text-[#cacaca]">Privacy Policy</h1>
             </div>
         </div>
+    </div>
     </div>
   )
 }

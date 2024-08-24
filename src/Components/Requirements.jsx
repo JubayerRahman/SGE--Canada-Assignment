@@ -9,7 +9,7 @@ function Requirements() {
   return (
     <div className='p-[20px]'>
         <h1 className='text-[56px] font-[600] text-center pt-[40px] '>Requirements for Studying in Canada</h1>
-        <div className="mt-[50px]">
+        <div className="mt-[50px] h-fit ">
             <div className="flex gap-4">
                 <div className="bg-[#59C3CF] w-[48%] shadow-lg rounded-[32px] p-[20px] h-[400px] cursor-pointer hover:h-[600px] hover:ease-out overflow-hidden relative group">
                 <h1 className="text-[40px] font-[600] text-white">Diploma</h1>
