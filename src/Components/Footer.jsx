@@ -13,13 +13,13 @@ import { FaYoutubeSquare } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="footerMain relative z-20  min-h-[200px] mt-[-60px]">
+    <div className="footerMain relative z-20  min-h-[200px] mt-[-300px] md:mt-[-60px]">
             <img src={footerImage} alt="" />
         <div className="footerContent bg-[#081831] p-[20px] ">
         <h1 className="text-center mt-[20px] font-[600]">Our Students are Our Reference</h1>
         <img className="mx-auto w-[170px] pt-[25px]"  src={logo} alt="" />
 
-        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex items-start justify-between flex-1 ">
+        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex flex-col md:flex-row items-start justify-between flex-1 ">
             <div className="w-[24%]" >
                 <h1 className="text-[16px]">About Shabuj Global Education</h1>
                 <br></br>
@@ -83,11 +83,11 @@ function Footer() {
                 </h1>
             </div>
         </div>
-        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex items-start justify-between flex-1 ">
+        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex flex-col md:flex-row gap-5  items-start justify-between flex-1 ">
             <img className="w-[580px]"  src={footerimage} alt="" />
-            <div className="w-[50%]">
+            <div className="md:w-[50%]">
                 <h1 className="text-[16px] text-center ">OUR OFFICE</h1>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-1  md:grid-cols-3">
                 <div className="row-span-2" >
                     <h1 className="text-[16px] text-[#5093FB] pb-[10px]">Head Office (London)</h1>
                     <h1 className="text-[16px] text-[#5093FB] pb-[10px] ">South Asian Regional <br />  Head Office (Dhaka)</h1>
@@ -111,17 +111,17 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex items-start justify-between flex-1 ">
-            <div className="flex items-center gap-2">
+        <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex flex-col md:flex-row  items-start justify-between flex-1 ">
+            <div className="flex items-center gap-2 mx-auto md:mx-0">
                 <h1 className="text-[25px]"><FaFacebookF/></h1>
                 <h1 className="text-[25px]"><FaInstagram/></h1>  
                 <h1 className="text-[25px]"><FaLinkedinIn/></h1>  
                 <h1 className="text-[25px]"><FaYoutubeSquare/></h1>  
             </div>
-            <div className="flex items-center gap-3">
-                <h1 className="text-[14px] text-[#cacaca]">Copyright © 2024, All Right Reserved Shabuj Global Education</h1>
-                <h1 className="text-[14px] text-[#cacaca]">Terms & Conditions</h1>
-                <h1 className="text-[14px] text-[#cacaca]">Privacy Policy</h1>
+            <div className="flex flex-col md:flex-row  items-center gap-3">
+                <h1 className="text-[14px] text-center  text-[#cacaca]">Copyright © 2024, All Right Reserved Shabuj Global Education</h1>
+                <h1 className="text-[14px] text-center  text-[#cacaca]">Terms & Conditions</h1>
+                <h1 className="text-[14px] text-center  text-[#cacaca]">Privacy Policy</h1>
             </div>
         </div>
     </div>

@@ -9,9 +9,9 @@ function Documents() {
   return (
     <div>
         <div className='bg-[#EFF6FF] text-white p-[20px]'>
-            <h1 className='text-[56px] font-[600] text-black text-center pt-[100px]'>Documents Required to Study in <br /> Canada for International Students</h1>
-            <div className="flex items-center justify-between p-[20px] mt-[50px]">
-                <div className="w-[50%]">
+            <h1 className='text-[16px]  md:text-[56px] font-[600] text-black text-center pt-[100px]'>Documents Required to Study in <br /> Canada for International Students</h1>
+            <div className="flex flex-col md:flex-row items-center justify-between p-[20px] mt-[50px]">
+                <div className="md:w-[50%]">
                 <h1 className='text-black text-[18px]'>
                 The Canadian Government provides an opportunity to Bangladeshi students to study in the country but as a prerequisite, you’ll have to obtain a Study Permit and a Temporary Resident Visa (TRV).
                 </h1>
@@ -39,7 +39,7 @@ function Documents() {
                 </div>
                 {/* <img src={dockReq} alt="" /> */}
                 <motion.svg
-                width="620" height="620" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+                className="w-[full] md:w-[50%]" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.g
 animate={{translateY:30}}
 transition={{repeat: Infinity, duration:3, repeatType:"reverse"}}
@@ -259,9 +259,9 @@ transition={{repeat: Infinity, duration:3, repeatType:"reverse"}}
         </div>
         {/* Statement */}
         <div className="p-[20px]">
-            <h1 className="text-[56px] font-[600] text-center mt-[100px]">Statement of Purpose for Canada</h1>
-            <div className="flex items-center justify-between">
-            <motion.svg width="594" height="594" viewBox="0 0 594 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <h1 className="text-[20px] md:text-[56px] font-[600] text-center mt-[100px]">Statement of Purpose for Canada</h1>
+            <div className="flex flex-col md:flex-row-reverse  items-center justify-between">
+            <motion.svg className="w-full md:w-[50%]" viewBox="0 0 594 594" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <motion.g
 className="backegrond"
@@ -385,7 +385,7 @@ transition={{repeat: Infinity, duration:2, repeatType: "reverse"}}
 </motion.g>
 </motion.svg>
 
-                <div className="w-[45%]">
+                <div className="md:w-[45%]">
                     <h1 className="text-[18px]">The Statement of Purpose (SOP) is a crucial document for students who want to study abroad. It is typically 1000–1200 words long and serves as an essay that showcases your identity and outlines the value you will bring to the university. It is important to follow a specific format and stick to the word limit to create an impressive SOP. If you need detailed guidance on how to structure a compelling Statement of Purpose, you can seek assistance from Shabuj Global Educations's counselors.</h1>
                     <h1 className="text-[18px]">
                     A typical SOP generally follows the following structure:
@@ -404,9 +404,9 @@ transition={{repeat: Infinity, duration:2, repeatType: "reverse"}}
         {/* document require */}
         
         <div className='bg-[#EFF6FF] text-white p-[20px]'>
-            <h1 className='text-[56px] font-[600] text-black text-center pt-[100px]'>Documents Required to apply <br />  for Canada Study Visa</h1>
-            <div className="flex items-center justify-between p-[20px] mt-[50px]">
-                <h1 className='text-black text-[18px] w-[45%]'>
+            <h1 className='text-[18px]  md:text-[56px] font-[600] text-black text-center pt-[100px]'>Documents Required to apply <br />  for Canada Study Visa</h1>
+            <div className="flex flex-col md:flex-row  items-center justify-between p-[20px] mt-[50px]">
+                <h1 className='text-black text-[18px] md:w-[45%]'>
                 To apply for a Canadian study visa, you'll need to provide the following documents:
 
                 <br />
@@ -418,7 +418,7 @@ transition={{repeat: Infinity, duration:2, repeatType: "reverse"}}
                     <li className='ml-[20px]'> Proof of financial support: Also known as proof of funds, this document shows that you have enough money to cover your first year of tuition and live in Canada</li>
                 </h1>
                 {/* <img src={DocImg} alt="" /> */}
-                <motion.svg width="537" height="537" viewBox="0 0 537 537" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.svg className="w-full md:w-[50%]" viewBox="0 0 537 537" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M406.047 93.8999C352.884 63.5165 305.8 88.5299 282.247 115.165C258.694 141.8 241.145 168.704 211.578 173.644C182.011 178.585 137.15 166.051 103.727 189.593C70.3039 213.135 70.4328 275.664 96.8962 311.116C123.36 346.569 191.827 363.517 270.82 374.912C299.164 379.205 328.089 377.6 355.784 370.197L391.666 357.17C409.194 349.168 423.886 340.157 436.323 332.843C455.247 321.674 461.917 294.448 465.536 274.504C470.79 244.617 470.335 214.005 464.193 184.288C456.267 146.848 438.192 112.255 406.047 93.8999Z" fill="#FF1A1A"/>
 <path opacity="0.8" d="M406.047 93.8999C352.884 63.5165 305.8 88.5299 282.247 115.165C258.694 141.8 241.145 168.704 211.578 173.644C182.011 178.585 137.15 166.051 103.727 189.593C70.3039 213.135 70.4328 275.664 96.8962 311.116C123.36 346.569 191.827 363.517 270.82 374.912C299.164 379.205 328.089 377.6 355.784 370.197L391.666 357.17C409.194 349.168 423.886 340.157 436.323 332.843C455.247 321.674 461.917 294.448 465.536 274.504C470.79 244.617 470.335 214.005 464.193 184.288C456.267 146.848 438.192 112.255 406.047 93.8999Z" fill="white"/>
 <path opacity="0.8" d="M487.317 131.114C486.114 111.267 472.56 104.758 463.968 114.209C461.927 116.515 460.559 119.338 460.016 122.369C459.472 125.4 459.773 128.522 460.886 131.393C463.904 139.545 469.091 154.012 472.184 165.332C476.738 182.043 475.213 194.953 480.529 188.122C485.846 181.291 488.831 156.181 487.317 131.114Z" fill="#FF1A1A"/>
@@ -684,10 +684,10 @@ transition={{repeat:Infinity, duration:2, repeatType:"reverse"}}
 
         {/* Faq */}
         <div className="p-[20px] Faq">
-            <h1 className="text-[56px] font-[600] text-center text-black mt-[100px]">Frequently Asked Questions</h1>
-            <div className="flex items-center justify-between mt-[100px] " >
+            <h1 className="text-[20px] md:text-[56px] font-[600] text-center text-black mt-[100px]">Frequently Asked Questions</h1>
+            <div className="flex flex-col md:flex-row  items-center justify-between mt-[100px] " >
                 <img src={faq} alt="" />
-                <div className="bg-[#191F2C] p-[20px] w-[45%] rounded-3xl">
+                <div className="bg-[#191F2C] p-[20px] md:w-[45%] rounded-3xl">
                     <div className="collapse border-b-[2px] border-gray-400  rounded-none">
                     <input type="radio" name="my-accordion-1"  />
                     <div className="collapse-title  text-[20px]  text-white">How much does it cost to study in Canada?</div>

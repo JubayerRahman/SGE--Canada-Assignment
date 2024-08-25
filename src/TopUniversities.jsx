@@ -18,7 +18,7 @@ function TopUniversities() {
     
   return (
     <div className='bg-[#EFF6FF] rounded-xl p-[20px] flex flex-col items-center justify-center'>
-        <h1 className='text-[56px] font-[600] text-[#081831] mt-[50px]'>Top Universities in Canada</h1>
+        <h1 className='text-[30px] text-center  md:text-[56px] font-[600] text-[#081831] mt-[50px]'>Top Universities in Canada</h1>
         <div className="flex items-start ">
           <div >
                 <div className='flex flex-wrap  items-center justify-evenly mb-[20px] mt-[20px]'>
@@ -84,14 +84,14 @@ function TopUniversities() {
           </div>
           <div className={`${uni1View? "pl-[20px] pt-[20px] pb-[20px]  w-[55%] mt-[40px] flex flex-col items-start border-l-[2px] h-[100%] ":"hidden"}`}>
             <img className='w-[200px]' src={uni1} alt="" />
-            <h1 className='text-[32px] font-[600] pt-[20px]'>McGill University</h1>
+            <h1 className='text-[20px] md:text-[32px] font-[600] pt-[20px]'>McGill University</h1>
             <h1 className='pt-[20px]'>McGill University is a publicly founded research Institute situated in Montreal, Quebec, Canada. With its establishment in 1831 by royal charter, the University carries the name of James McGill, a scottish merchant, whose philanthropic donation in 1813 created the university of McGill Collage.</h1>
             <h1 className='font-[600] text-[14px] mt-[20px]'>One of the Canada's leading university</h1>
-            <h1 className='text-[14px] mt-[20px] flex items-center'>
+            <h1 className='text-[12px] md:text-[14px] mt-[20px] flex items-center'>
                 <span className='text-blue-700 mr-[5px]'><FaLocationDot /> </span>
                 <h1>Located at Quebec, Canada</h1>
             </h1>
-            <button className='bg-blue-700 rounded-3xl mx-auto text-white p-[5px] w-[60%] mt-[20px]'>Apply Now</button>
+            <button className='bg-blue-700 rounded-3xl mx-auto text-white p-[5px] w-[80%]  md:w-[60%] mt-[20px]'>Apply Now</button>
           </div>
         </div>
     </div>

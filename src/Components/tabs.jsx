@@ -12,23 +12,23 @@ function Tabs() {
 
   return (
     <div className='mt-[50px] overflow-hidden'>
-        <div className='flex z-[0]'>
+        <div className='flex flex-col md:flex-row  z-[0]'>
             <h1 onClick={()=>{setBtn1State(true), setBtn2State(false), setBtn3State(false), setBtn4State(false)}}  className={`${btn1State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#59C3CF] text-[20px] text-white font-[700]  w-[25%] text-center " }`}>Programs & Duration</h1>
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#59C3CF] text-[20px] text-white font-[700]  md:w-[25%] text-center " }`}>Programs & Duration</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(true), setBtn3State(false), setBtn4State(false)}}  className={`${btn2State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#9667EF] text-[20px] text-white font-[700]  w-[25%] text-center  " }`}>Cost of Studying</h1>
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#9667EF] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Cost of Studying</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(true), setBtn4State(false)}}  className={`${btn3State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  w-[25%] text-center  ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#E2635E] text-[20px] text-white font-[700]  w-[25%] text-center  " }`}>Academic Intakes</h1>
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center  ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#E2635E] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Academic Intakes</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(false), setBtn4State(true)}}  className={`${btn4State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF] w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#58B1EA] text-[20px] text-white font-[700] w-[25%] text-center " }`}>Deadline</h1>
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF] md:w-[25%] text-center ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#58B1EA] text-[20px] text-white font-[700] md:w-[25%] text-center " }`}>Deadline</h1>
         </div>
-        <div className="container1 bg-[#EFF6FF] rounded-3xl p-[15px]  z-[1] h-[500px]">
-          <div className={`${btn1State? "flex  items-center justify-evenly": "hidden"}`}>
-            <div className='w-[50%]'>
+        <div className="container1 bg-[#EFF6FF] rounded-3xl p-[15px]  z-[1] md:h-[500px]">
+          <div className={`${btn1State? "flex flex-col md:flex-row  items-center justify-evenly": "hidden"}`}>
+            <div className='md:w-[50%]'>
               <h1 className='text-[30px] font-[600] text-[#181A1B] text-center'>Programs and their duration in Canada</h1>
               <h1 className='text-[18px]  text-[#181A1B] text-center mb-[40px]'>Here are the programs that Canadian universities offer:</h1>
               <div className="overflow-x-auto">
@@ -70,7 +70,7 @@ function Tabs() {
               <img className='w-[380px]'  src={clock} alt="" />
             </div>
           </div>
-          <div className={`${btn2State? "flex items-center justify-evenly":"hidden"}`}>
+          <div className={`${btn2State? "flex flex-col md:flex-row  items-center justify-evenly":"hidden"}`}>
             <div className='flex flex-col items-center'>
             <h1 className='text-[30px] font-[600] text-[#181A1B] text-center mb-[20px]'>Cost of Studying</h1>
           <div className="overflow-x-auto">
@@ -109,8 +109,8 @@ function Tabs() {
             </div>
           <img className='w-[450px]'  src={coin} alt="" />
           </div>
-          <div className={`${btn3State? "flex items-center justify-evenly":"hidden"}`}>
-            <div className='flex flex-col items-center w-[50%]'>
+          <div className={`${btn3State? "flex flex-col md:flex-row  items-center justify-evenly":"hidden"}`}>
+            <div className='flex flex-col items-center md:w-[50%]'>
             <h1 className='text-[30px] font-[600] text-[#181A1B] text-center '>Acadamic intake to Study Canada</h1>
             <h1 className='mb-[20px] mt-[10px]  text-center font-[500] w-[75%] mx-auto'>Canadian Universities usually have 3 intakes. In soome universities, intakes may also be referred to as a semester. The three intakes available in canada are:</h1>
           <div className="overflow-x-auto w-[80%]">
@@ -141,8 +141,8 @@ function Tabs() {
             </div>
           <img className='w-[450px]'  src={calender} alt="" />
           </div>
-          <div className={`${btn4State? "flex items-center justify-evenly":"hidden"}`}>
-            <div className='flex flex-col items-center w-[70%]'>
+          <div className={`${btn4State? "flex flex-col md:flex-row  items-center justify-evenly":"hidden"}`}>
+            <div className='flex flex-col items-center md:w-[70%]'>
             <h1 className='text-[30px] font-[600] text-[#181A1B] text-center '>Deadline for Canaduan Universityes</h1>
             <h1 className='mb-[20px] mt-[10px]  text-center font-[500] w-[70%] mx-auto'>You need to start preparing for your Canada application 8-9 months in advance before the commencement of your program.</h1>
             </div>

@@ -39,7 +39,8 @@
     bottom: 0;
     height: 650px;
     top: 20%;
-    animation: moveUp 10s infinite linear;
+    margin-bottom: -100px;
+    /* animation: moveUp 10s infinite linear; */
   }
   .layer3 img{
     height: 540px;
@@ -91,7 +92,7 @@
 }
 @keyframes moveUp {
   0%{
-    transform: translateY(10%);
+    transform: translateY(3%);
     opacity: 100%;
   }
   100%{
