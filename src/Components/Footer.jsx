@@ -20,12 +20,12 @@ function Footer() {
         <img className="mx-auto w-[170px] pt-[25px]"  src={logo} alt="" />
 
         <div className="border-t-2 container mx-auto mt-[50px] pt-[20px] flex flex-col md:flex-row items-start justify-between flex-1 ">
-            <div className="w-[24%]" >
-                <h1 className="text-[16px]">About Shabuj Global Education</h1>
+            <div className="md:w-[24%]" >
+                <h1 className="text-center md:text-left text-[14px]  md:text-[16px]">About Shabuj Global Education</h1>
                 <br></br>
-                <h1 className="text-[16px]">Lorem ipsum dolor sit amet consectetur. Amet commodo bibendum ac sem molestie. Nisi imperdiet orci nulla in. Convallis eu ligula neque id varius sit lacus et. Pellentesque porta interdum morbi enim ultrices egestas aliquet amet. Aliquet elit amet porttitor posuere.</h1>
+                <h1 className=" text-center md:text-left text-[14px]  md:text-[16px]">Lorem ipsum dolor sit amet consectetur. Amet commodo bibendum ac sem molestie. Nisi imperdiet orci nulla in. Convallis eu ligula neque id varius sit lacus et. Pellentesque porta interdum morbi enim ultrices egestas aliquet amet. Aliquet elit amet porttitor posuere.</h1>
             </div>
-            <div className="w-[24%]" >
+            <div className="md:w-[24%]  mt-[20px] md:mt-[0px]" >
                 <h1 className="text-[16px]">Study Destinations</h1>
                 <br></br>
                 <h1 className="text-[16px]">
@@ -42,7 +42,7 @@ function Footer() {
                 New Zealand
                 </h1>
             </div>
-            <div className="w-[24%]" >
+            <div className="md:w-[24%]" >
                 <h1 className="text-[16px]">Services for students</h1>
                 <br></br>
                 <h1 className="text-[16px]">
@@ -61,7 +61,7 @@ function Footer() {
                 Services for partners
                 </h1>
             </div>
-            <div className="w-[24%]" >
+            <div className="m:w-[24%]" >
                 <h1 className="text-[16px]">Company</h1>
                 <br></br>
                 <h1 className="text-[16px]">
