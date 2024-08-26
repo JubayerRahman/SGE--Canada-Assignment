@@ -12,7 +12,7 @@ function Expert() {
         <div className="group cursor-pointer h-[500px] relative md:mt-[-100px]">
     <div className="relative">
         <img className="z-10 relative " src={man} alt="" />
-        <div className="bg-white w-[300px] h-[300px] left-[3%] md:w-[400px] md:h-[400px] rounded-full absolute bottom-[-50px] md:left-10"></div>
+        <div className="bg-white left-[3%] md:w-[400px] md:h-[400px] rounded-full absolute bottom-[-50px] md:left-10"></div>
     </div>
     <img className="opacity-0 z-0 group-hover:opacity-100 ease-in-out duration-300 absolute mb-[-100px]  top-0 bottom-28" src={bg} alt="" />
 </div>

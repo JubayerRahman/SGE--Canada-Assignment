@@ -23,14 +23,15 @@ function TopUniversities() {
     const [uni8View, setUni8View] = useState(false);
     const [uni9View, setUni9View] = useState(false);
     const [uni10View, setUni10View] = useState(false);
+    const [uniDivClass, setUniDivClass] = useState("grid grid-cols-2  md:grid-cols-6  mb-[20px] mt-[20px]")
     console.log(uni1View);
     
   return (
-    <div className='bg-[#EFF6FF] rounded-xl p-[20px] flex flex-col items-center justify-center'>
+    <div className='bg-[#EFF6FF] rounded-xl p-[20px] flex flex-col items-center justify-center  '>
         <h1 className='text-[30px] text-center  md:text-[56px] font-[600] text-[#081831] mt-[50px]'>Top Universities in Canada</h1>
-        <div className="flex items-start ">
+        <div className="flex items-start h-[800px] overflow-scroll scrollbar-hide  ">
           <div >
-                <div className='flex flex-wrap  items-center justify-evenly mb-[20px] mt-[20px]'>
+                <div className={uniDivClass}>
                 <div 
                 onClick={() => {
                     setUni1View(!uni1View), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
@@ -79,8 +80,7 @@ function TopUniversities() {
                 className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni6} alt="" />
                 </div>
-                </div>
-                <div className='flex flex-wrap  items-center justify-evenly mb-[20px]'>
+                
                 <div
                 onClick={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
@@ -129,14 +129,12 @@ function TopUniversities() {
                 className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni2} alt="" />
                 </div>
-                </div>
-                <div className='flex flex-wrap  items-center justify-evenly'>
                 <div
                 onClick={() => {
                     setUni1View(false), setUni2View(false), setUni3View(!uni3View), setUni4View(false), setUni5View(false)
                     setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
                 }} 
-                className="uni1 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
+                className="uni1  h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni3} alt="" />
                 </div>
                 <div
@@ -181,7 +179,7 @@ function TopUniversities() {
                 </div>
                 </div>
           </div>
-          <div className={`${uni1View? "pl-[20px] pt-[20px] pb-[20px]  w-[55%] mt-[40px] flex flex-col items-start border-l-[2px] h-[100%] ":"hidden"}`}>
+          <div className={`${uni1View? "pl-[20px] pt-[20px] pb-[20px]  w-[55%] mt-[40px] flex flex-col items-start border-l-[2px] h-[100%] transiton duration-100 ":"hidden opacity-0"}`}>
             <img className='w-[200px]' src={uni1} alt="" />
             <h1 className='text-[20px] md:text-[32px] font-[600] pt-[20px]'>McGill University</h1>
             <h1 className='pt-[20px]'>McGill University is a publicly founded research Institute situated in Montreal, Quebec, Canada. With its establishment in 1831 by royal charter, the University carries the name of James McGill, a scottish merchant, whose philanthropic donation in 1813 created the university of McGill Collage.</h1>

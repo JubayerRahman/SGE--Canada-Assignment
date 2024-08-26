@@ -74,6 +74,11 @@
   /* animation:leafgrow 3s infinite ease-in-out ; */
 }
 
+.transiton{
+  opacity: 1;
+  transition: all 3s ease-in-out;
+}
+
 @keyframes moveRight {
   from{
     transform: translateX(0%);

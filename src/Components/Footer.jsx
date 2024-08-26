@@ -14,7 +14,7 @@ import { FaYoutubeSquare } from "react-icons/fa";
 function Footer() {
   return (
     <div className="footerMain relative z-20  min-h-[200px] mt-[-215px] md:mt-[-60px]">
-            <img src={footerImage} alt="" />
+            <img className="w-full" src={footerImage} alt="" />
         <div className="footerContent bg-[#081831] p-[20px] ">
         <h1 className="text-center mt-[20px] font-[600]">Our Students are Our Reference</h1>
         <img className="mx-auto w-[170px] pt-[25px]"  src={logo} alt="" />

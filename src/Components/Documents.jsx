@@ -39,7 +39,7 @@ function Documents() {
                 </div>
                 {/* <img src={dockReq} alt="" /> */}
                 <motion.svg
-                className="w-[full] md:w-[50%]" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+                className="w-[full] md:w-[40%]" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.g
 animate={{translateY:30}}
 transition={{repeat: Infinity, duration:3, repeatType:"reverse"}}
@@ -685,7 +685,7 @@ transition={{repeat:Infinity, duration:2, repeatType:"reverse"}}
         {/* Faq */}
         <div className="p-[20px] Faq">
             <h1 className="text-[20px] md:text-[56px] font-[600] text-center text-black mt-[100px]">Frequently Asked Questions</h1>
-            <div className="flex flex-col md:flex-row  items-center justify-between mt-[100px] " >
+            <div className="flex flex-col md:flex-row  items-center justify-evenly mt-[100px] " >
                 {/* <img src={faq} alt="" /> */}
 
                 <motion.svg className=" w-[200px]  md:w-[500px]" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
