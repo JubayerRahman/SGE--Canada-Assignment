@@ -11,19 +11,19 @@ function Tabs() {
     const [btn4State, setBtn4State] = useState(false)
 
   return (
-    <div className='mt-[50px] overflow-hidden'>
-        <div className='flex flex-col md:flex-row  z-[0]'>
+    <div className='mt-[50px] overflow-hidden  '>
+        <div className='flex flex-col md:flex-row  z-[0] pl-[10px] pr-[10px] '>
             <h1 onClick={()=>{setBtn1State(true), setBtn2State(false), setBtn3State(false), setBtn4State(false)}}  className={`${btn1State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center ':
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center ':
                 "cursor-pointer p-[20px] rounded-[20px] bg-[#59C3CF] text-[20px] text-white font-[700]  md:w-[25%] text-center " }`}>Programs & Duration</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(true), setBtn3State(false), setBtn4State(false)}}  className={`${btn2State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center ':
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center ':
                 "cursor-pointer p-[20px] rounded-[20px] bg-[#9667EF] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Cost of Studying</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(true), setBtn4State(false)}}  className={`${btn3State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF]  md:w-[25%] text-center  ':
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center  ':
                 "cursor-pointer p-[20px] rounded-[20px] bg-[#E2635E] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Academic Intakes</h1>
             <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(false), setBtn4State(true)}}  className={`${btn4State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[30px] bg-[#EFF6FF] md:w-[25%] text-center ':
+                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF] md:w-[25%] text-center ':
                 "cursor-pointer p-[20px] rounded-[20px] bg-[#58B1EA] text-[20px] text-white font-[700] md:w-[25%] text-center " }`}>Deadline</h1>
         </div>
         <div className="container1 bg-[#EFF6FF] rounded-3xl p-[15px]  z-[1] md:h-[500px]">

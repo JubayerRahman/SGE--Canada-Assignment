@@ -12,7 +12,7 @@ function PopularPrograms() {
                 <span className='AnimationText ml-[5px] '> Engineering</span> 
                 <span className='AnimationText ml-[5px] '> Health Science</span> 
                 <span className='AnimationText ml-[5px] '> Physiotherapy</span> 
-                <span className='AnimationText ml-[5px] '> Information technolog</span> 
+                <span className='AnimationText ml-[5px] '> Information technology</span> 
                 <span className='AnimationText ml-[5px] '> Animation and gaming </span> 
             </div>
         </h>

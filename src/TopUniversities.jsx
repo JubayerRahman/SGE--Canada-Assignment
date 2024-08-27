@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import uni1 from "../public/mcgill.png"
 import uni2 from "../public/calgary.png"
 import uni3 from "../public/dalhousie.png"
@@ -23,156 +23,251 @@ function TopUniversities() {
     const [uni8View, setUni8View] = useState(false);
     const [uni9View, setUni9View] = useState(false);
     const [uni10View, setUni10View] = useState(false);
-    const [uniDivClass, setUniDivClass] = useState("grid grid-cols-2  md:grid-cols-6  mb-[20px] mt-[20px]")
+    const [divideIndicator, setDividerIndicator] = useState(false)
+    const [uniDivClass, setUniDivClass] = useState("grid grid-cols-1  md:grid-cols-6  mb-[20px] mt-[20px]")
     console.log(uni1View);
+
+    useEffect(()=>{
+        if (
+            uni1View === true || uni2View === true || uni3View === true || uni4View === true || uni5View === true ||
+            uni6View === true || uni7View === true || uni8View === true || uni9View === true || uni10View === true
+        ) {
+            setUniDivClass("grid grid-cols-1  md:grid-cols-3  mb-[20px] mt-[20px]")
+        }
+        else{
+            setUniDivClass("grid grid-cols-2  md:grid-cols-6  mb-[20px] mt-[20px]")
+        }
+    },[divideIndicator])
     
   return (
     <div className='bg-[#EFF6FF] rounded-xl p-[20px] flex flex-col items-center justify-center  '>
         <h1 className='text-[30px] text-center  md:text-[56px] font-[600] text-[#081831] mt-[50px]'>Top Universities in Canada</h1>
-        <div className="flex items-start h-[800px] overflow-scroll scrollbar-hide  ">
+        <div className="flex items-start h-[600px] w-[100%]  overflow-scroll scrollbar-hide  ">
           <div >
                 <div className={uniDivClass}>
                 <div 
-                onClick={() => {
+                onMouseEnter={() => {
+                    if (uni1View === false) {
+                        setUni1View(!uni1View), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                        setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                        setDividerIndicator(!divideIndicator)
+                    }
+                }}  
+                onMouseLeave={() => {
                     setUni1View(!uni1View), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
                 }}  
                 className="uni1 h-[120px] mt-[20px] mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni1} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(!uni2View), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(!uni2View), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni2} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(!uni3View), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(!uni3View), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni3 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni3} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(!uni4View), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(!uni4View), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni4 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni4} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(!uni5View)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(!uni5View)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni5 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni5} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni6} alt="" />
                 </div>
                 
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni1 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800 ">
                     <img className='w-[150px]' src={uni7} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni8} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(!uni9View), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(!uni9View), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(!uni9View), setUni10View(false),
+                    setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni3 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni9} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(!uni10View)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(!uni10View), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(!uni10View), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni4 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni10} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(!uni1View), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(!uni1View), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni5 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni1} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(!uni2View), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(!uni2View), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni2} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(!uni3View), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(!uni3View), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni1  h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni3} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(!uni4View), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(!uni4View), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni2 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]' src={uni4} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(!uni5View)
-                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(!uni5View)
+                    setUni6View(false), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni3 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni5} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false),setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(!uni6View), setUni7View(false), setUni8View(false), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni4 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni6} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false),setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(!uni7View), setUni8View(false), setUni9View(false), setUni10View(false),setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni5 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px] h-[70px] object-contain ' src={uni7} alt="" />
                 </div>
                 <div
-                onClick={() => {
+                onMouseEnter={() => {
                     setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
-                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
+                }} 
+                onMouseLeave={() => {
+                    setUni1View(false), setUni2View(false), setUni3View(false), setUni4View(false), setUni5View(false)
+                    setUni6View(false), setUni7View(false), setUni8View(!uni8View), setUni9View(false), setUni10View(false), setDividerIndicator(!divideIndicator)
                 }} 
                 className="uni6 h-[120px] mt-[20px]  mr-[10px]  bg-white pt-[40px] pb-[40px] pl-[20px] pr-[20px] cursor-pointer border-b-4 border-b-white  hover:border-b-4 hover:border-blue-800  ">
                     <img className='w-[150px]  h-[70px] object-contain ' src={uni8} alt="" />
