@@ -3,45 +3,48 @@
     background: linear-gradient(to right, #ED1C24, #FCEC21);
     -webkit-background-clip: text;
     color: transparent;
-    animation: wordsSlide 6s infinite;
+    animation: wordsSlide 12s infinite;
 }
 
 @keyframes wordsSlide {
-    9%{
+    8%{
         transform: translateY(-112%);
     }
-    18%{
+    16%{
         transform: translateY(-100%);
     }
-    27%{
+    24%{
         transform: translateY(-212%);
     }
-    36%{
+    32%{
         transform: translateY(-200%);
     }
-    45%{
+    40%{
         transform: translateY(-312%);
     }
-    54%{
+    48%{
         transform: translateY(-300%);
     }
-    63%{
+    56%{
         transform: translateY(-412%);
     }
-    72%{
+    64%{
         transform: translateY(-400%);
     }
-    81%{
+    72%{
         transform: translateY(-512%);
     }
-    90%{
+    80%{
         transform: translateY(-500%);
     }
-    95%{
+    88%{
         transform: translateY(-612%);
     }
-    100%{
+    97%{
         transform: translateY(-600%);
+    }
+    100%{
+        transform: translateY(-712%);
     }
     
 }

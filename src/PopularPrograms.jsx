@@ -14,6 +14,7 @@ function PopularPrograms() {
                 <span className='AnimationText ml-[5px] '> Physiotherapy</span> 
                 <span className='AnimationText ml-[5px] '> Information technology</span> 
                 <span className='AnimationText ml-[5px] '> Animation and gaming </span> 
+                <span className='AnimationText ml-[5px] '> Computer Science</span> 
             </div>
         </h>
     </div>
