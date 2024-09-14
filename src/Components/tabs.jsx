@@ -12,21 +12,46 @@ function Tabs() {
 
   return (
     <div className='mt-[50px] overflow-hidden  '>
-        <div className='flex flex-col md:flex-row  z-[0] pl-[10px] pr-[10px] '>
-            <h1 onClick={()=>{setBtn1State(true), setBtn2State(false), setBtn3State(false), setBtn4State(false)}}  className={`${btn1State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#59C3CF] text-[20px] text-white font-[700]  md:w-[25%] text-center " }`}>Programs & Duration</h1>
-            <h1 onClick={()=>{setBtn1State(false), setBtn2State(true), setBtn3State(false), setBtn4State(false)}}  className={`${btn2State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#9667EF] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Cost of Studying</h1>
-            <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(true), setBtn4State(false)}}  className={`${btn3State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF]  md:w-[25%] text-center  ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#E2635E] text-[20px] text-white font-[700]  md:w-[25%] text-center  " }`}>Academic Intakes</h1>
-            <h1 onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(false), setBtn4State(true)}}  className={`${btn4State ===true ?
-                'text-[20px] font-[700] cursor-pointer p-[15px] rounded-[20px] bg-[#EFF6FF] md:w-[25%] text-center ':
-                "cursor-pointer p-[20px] rounded-[20px] bg-[#58B1EA] text-[20px] text-white font-[700] md:w-[25%] text-center " }`}>Deadline</h1>
+        <div className='flex flex-col md:flex-row  z-[0] pl-[10px] pr-[10px] lable '>
+          <div className="md:w-[25%] p-[0px]">
+            <div className={`${btn1State ===true ?
+                'text-[20px] font-[700] cursor-pointer p-[20px] rounded-[20px] bg-[#EFF6FF]  text-center ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#59C3CF]   text-[20px] text-white font-[700]   text-center " }`}>
+            <h1 onClick={()=>{setBtn1State(true), setBtn2State(false), setBtn3State(false), setBtn4State(false)}}  >Programs & Duration</h1>
+            </div>
+                <div className={`${btn1State === true ? "bg-[#EFF6FF] w-full h-[50px]  mt-[-50px] ml-[20px]  hidden md:block": "bg-[#59C3CF] w-full h-[50px]  mt-[-50px] ml-[20px]  hidden md:block"  }`}>
+                </div>
+          </div>
+          <div className='md:w-[25%] p-[0px]'>
+            <div
+            onClick={()=>{setBtn1State(false), setBtn2State(true), setBtn3State(false), setBtn4State(false)}} 
+            className={`${btn2State ===true ?
+              'text-[20px] font-[700] cursor-pointer p-[20px] rounded-[20px] bg-[#EFF6FF] text-center ':
+              "cursor-pointer p-[20px] rounded-[20px] bg-[#9667EF] text-[20px] text-white font-[700] text-center  " }`}>
+              <h1 >Cost of Studying</h1>
+            </div>
+              <div className={`${btn2State === true ? "bg-[#EFF6FF] w-full h-[50px]  mt-[-50px] ml-[20px]  hidden md:block": "bg-[#9667EF] w-full h-[50px]  mt-[-50px] ml-[20px]  hidden md:block"  }`}>
+                </div>
+          </div>
+          <div className='md:w-[25%] p-[0px]'>
+            <div onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(true), setBtn4State(false)}}  className={`${btn3State ===true ?
+                  'text-[20px] font-[700] cursor-pointer p-[20px] rounded-[20px] bg-[#EFF6FF]  text-center  ':
+                  "cursor-pointer p-[20px] rounded-[20px] bg-[#E2635E] text-[20px] text-white font-[700] text-center  " }`}>
+
+                  <h1>Academic Intakes</h1>
+              </div>
+              <div className={`${btn3State === true ? "bg-[#EFF6FF] w-full h-[50px]  mt-[-50px] ml-[20px]  hidden md:block": "bg-[#E2635E] w-full h-[50px]  mt-[-50px] ml-[20px] hidden md:block"  }`}>
+                </div>
+          </div>
+          <div  className='md:w-[25%] p-[0px]'>
+            <div onClick={()=>{setBtn1State(false), setBtn2State(false), setBtn3State(false), setBtn4State(true)}}  className={`${btn4State ===true ?
+                'text-[20px] font-[700] cursor-pointer p-[20px] rounded-[20px] bg-[#EFF6FF] text-center ':
+                "cursor-pointer p-[20px] rounded-[20px] bg-[#58B1EA] text-[20px] text-white font-[700] text-center " }`}>
+                <h1>Deadline</h1>
+                </div>
+          </div>
         </div>
-        <div className="container1 bg-[#EFF6FF] rounded-3xl p-[15px]  z-[1] md:h-[500px]">
+        <div className="container1 bg-[#EFF6FF] rounded-3xl p-[15px]  z-[1] md:h-[500px] tabData ">
           <div className={`${btn1State? "flex flex-col md:flex-row  items-center justify-evenly": "hidden"}`}>
             <div className='md:w-[50%]'>
               <h1 className='text-[30px] font-[600] text-[#181A1B] text-center'>Programs and their duration in Canada</h1>
